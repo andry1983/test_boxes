@@ -1,0 +1,2 @@
+export const FULL_SCREEN_COUNT_ROW = 39;
+export const FULL_SCREEN_COUNT_COLUMN = 12;

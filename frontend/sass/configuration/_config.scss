@@ -1,0 +1,33 @@
+//Compass rhythm
+$base-font-size: 15.98px !global;
+$base-line-height: 24px !global;
+
+$rhythm-unit: "rem" !global;
+$rem-with-px-fallback: true !global;
+$default-rhythm-border-width: 1px;
+$round-to-nearest-half-line: false;
+$min-line-padding: 2px;
+
+//susy  grids default
+$columnCountDefault: 12;
+$gutters: 1/4;
+$fullScreenRows: 39;
+
+//system-colors
+$colors: (
+        body:#ffffff,
+        header:#f8f9fa,
+        info:#17a2b8,
+        warning:#ffc107,
+        success:#28a745,
+        danger:#dc3545,
+        dark:#343a40,
+        primary:#007bff,
+        secondary:#6c757d,
+        gray:#99a09b,
+        brown:#796055
+);
+
+$size-icon-large: 3;
+$size-icon-small: 1;
+$size-icon-medium: 2.2;

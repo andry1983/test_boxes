@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@import "mixins";
+
+@include establish-baseline;
+@import "~compass-mixins/lib/animate";
+
+@import "../../../../sass/myMixins/mixins";
+@import "../../../../sass/configuration/config";
+@import "../../../../sass/configuration/_library/animate";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @include container(100%);
+  font-family: 'Roboto', sans-serif;
+}
+
+#apps {
+  height: 100%;
+}
+
+[data-reactroot] {
+  width: 100%;
+  height: 100%;
+}
+
+.large {
+  font-size: rhythm($size-icon-large);
+  line-height: rhythm($size-icon-large);
+}
+
+.medium {
+  font-size: rhythm($size-icon-medium);
+}
+
+.small {
+  font-size: rhythm($size-icon-small);
+  padding: 0 5px;
+}
+
+
+@import "../../../components/style/index";

@@ -1,0 +1,6 @@
+export const CHANGE_POSITION = 'CHANGE_POSITION';
+export const ADD_BOX = 'ADD_BOX';
+export const DELETE_ALL_BOXES = 'DELETE_ALL_BOXES';
+export const ACTIVATE_BOX = 'ACTIVATE_BOX';
+export const UPDATE_DATA_BOX = 'UPDATE_DATA_BOX';
+export const UPDATE_ALL_DATA_BOX = 'UPDATE_ALL_DATA_BOX';

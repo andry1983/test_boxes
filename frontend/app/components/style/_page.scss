@@ -1,0 +1,9 @@
+.page-container{
+  width: span($columnCountDefault);
+  height: rhythm($fullScreenRows);
+  h2{
+    text-align: center;
+    line-height: rhythm(1);
+    font-size: rhythm(2);
+  }
+}

@@ -1,0 +1,41 @@
+.row-h, .column-h {
+  @for $i from $fullScreenRows through 1 {
+    &#{'-' + $i} {
+      height: rhythm($i);
+    }
+  }
+}
+
+.row-w, .column-w {
+  @for $i from $columnCountDefault through 1 {
+    &#{'-' + $i} {
+      width: span($i);
+    }
+  }
+}
+
+$float_level: 'left', 'right', 'none';
+
+.row-float, .column-float {
+  @each $i in $float_level {
+    &#{'-' + $i} {
+      float: #{$i};
+    }
+  }
+}
+
+.center-column {
+  background-color: rgba(map_get($colors, gray), 0.3);
+}
+
+.left-column {
+  @include box-sizing(border-box);
+  border-right: 1px solid lighten(map_get($colors, gray), 10%);
+  background-color: rgba(map_get($colors, secondary), 0.3);
+}
+
+.header {
+  border-bottom: 1px solid darken(map_get($colors, warning), 10%);
+  background-color: rgba(map_get($colors, info), 0.3);
+  @include box-sizing(border-box);
+}

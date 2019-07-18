@@ -1,0 +1,105 @@
+
+.box-control-panel {
+  height: rhythm($fullScreenRows / 3);
+  width: span($columnCountDefault);
+  @include animation-delay(1s);
+  @include box-sizing(border-box);
+  border-bottom: 1px solid map_get($colors, gray);
+  @include box-shadow(inset 0px 0px 5px 2px map_get($colors, gray));
+  padding: 5px;
+
+  h1, h2, h3, h4, h5 {
+    text-align: center;
+    line-height: rhythm(1.5);
+    font-weight: bolder;
+  }
+}
+
+.count-box-monitor {
+  height: rhythm(4);
+  text-align: center;
+  width: span($columnCountDefault);
+  display: inline-block;
+  vertical-align: middle;
+  font-size: rhythm(4);
+  font-weight: bold;
+  color: darken(map_get($colors, primary), 5%);
+  @include text-shadow(0 0 15px map_get($colors, body));
+}
+
+.box-container {
+  width: 100%;
+  height: inherit;
+  @include box-sizing(border-box);
+  padding: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.box {
+  position: absolute;
+  background-color: rgba(map_get($colors, primary), 0.6);
+  float: left;
+  @include transform-origin(center);
+  $size: 10;
+
+  p {
+    text-align: center;
+    line-height: 100px;
+  }
+
+  &:hover {
+    cursor: move;
+  }
+
+  .drag-point {
+    position: absolute;
+    width: #{$size + 'px'};
+    height: #{$size + 'px'};
+    @include border-radius(#{$size + 'px'});
+    background-color: map_get($colors, warning);
+
+    &:hover {
+      @include transform(scale(2));
+      cursor: default;
+      //@include transition(transform 0.5s);
+    }
+  }
+
+  .top-left {
+    top: -#{($size/2) + 'px'};
+    left: -#{($size/2)  + 'px'};
+
+    &:hover {
+      cursor: nwse-resize;
+    }
+  }
+
+  .top-right {
+    top: -#{($size/2) + 'px'};
+    right: -#{($size/2)  + 'px'};
+
+    &:hover {
+      cursor: ne-resize;
+    }
+  }
+
+  .bottom-left {
+    bottom: -#{($size/2) + 'px'};
+    left: -#{($size/2)  + 'px'};
+
+    &:hover {
+      cursor: nesw-resize;
+    }
+  }
+
+  .bottom-right {
+    bottom: -#{($size/2) + 'px'};
+    right: -#{($size/2)  + 'px'};
+
+    &:hover {
+      cursor: nw-resize;
+    }
+  }
+}
