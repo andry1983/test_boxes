@@ -2,13 +2,16 @@ import os
 import environ
 import sys
 import datetime
+from pathlib import Path
+#
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# ROOT_DIR = environ.Path(__file__) - 2
 ROOT_DIR = environ.Path(__file__) - 2
 APPS_DIR = ROOT_DIR.path('apps')
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-sys.path.append(APPS_DIR.path('core_project').root)
+sys.path.append(APPS_DIR.root)
 
 # region os environment variables
 env = environ.Env(
