@@ -82,7 +82,7 @@
     "babel-runtime": "latest",
     "browserslist": "^4.6.6",
     "is_js": "^0.9.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.19",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
